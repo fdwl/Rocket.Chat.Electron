@@ -17,6 +17,15 @@ sidebar.on('badge-setted', function () {
 });
 
 export const start = function () {
+    //
+    // const start_url = 'https://im.iopenshop.com';
+    // // sidebar.show();
+    // servers.addHost(start_url);
+    // // webview.setActive(start_url);
+    // servers.setActive(start_url);
+    // // servers.restoreActive();
+    // return;
+
     const defaultInstance = 'https://demo.rocket.chat';
 
     // connection check
@@ -162,7 +171,13 @@ export const start = function () {
         webview.showLanding();
     });
 
-    servers.restoreActive();
+
+
+    // sidebar.show();
+    const start_url = "https://im.iopenshop.com";
+    servers.addHost( start_url );
+    servers.setActive( start_url );
+    // servers.restoreActive();
 };
 
 window.addEventListener('focus', function () {

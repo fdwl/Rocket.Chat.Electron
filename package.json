@@ -1,8 +1,8 @@
 {
   "name": "rocketchat",
-  "productName": "Rocket.Chat+",
+  "productName": "iOpenShop",
   "description": "Rocket.Chat Native Cross-Platform Desktop Application via Electron.",
-  "version": "2.10.0-develop",
+  "version": "2.10.1",
   "author": "Rocket.Chat Support <support@rocket.chat>",
   "copyright": "© 2017, Rocket.Chat",
   "homepage": "https://rocket.chat",
@@ -10,7 +10,7 @@
   "main": "app/background.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RocketChat/Rocket.Chat.Electron.git"
+    "url": "https://github.com/fdwl/Rocket.Chat.Electron.git"
   },
   "build": {
     "appId": "chat.rocket",
@@ -56,7 +56,7 @@
     "publish": [
       {
         "provider": "github",
-        "owner": "RocketChat",
+        "owner": "fdwl",
         "repo": "Rocket.Chat.Electron",
         "vPrefixedTagName": false
       }

@@ -7,7 +7,7 @@ const userDataDir = jetpack.cwd(app.getPath('userData'));
 const updateStoreFile = 'update.json';
 let checkForUpdatesEvent;
 
-autoUpdater.autoDownload = false;
+autoUpdater.autoDownload = true;
 
 let updateFile = {};
 try {

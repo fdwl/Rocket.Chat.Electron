@@ -20,11 +20,15 @@ import { afterMainWindow } from './background.custom';
 import env from './env';
 
 const setApplicationMenu = function () {
-    const menus = [editMenuTemplate];
+    const menus = [];//editMenuTemplate
+
     if (env.name !== 'production') {
         menus.push(devMenuTemplate);
+        Menu.setApplicationMenu(Menu.buildFromTemplate([]));
+    } else {
+        //Menu.setApplicationMenu([]);
+        Menu.setApplicationMenu(Menu.buildFromTemplate([]));
     }
-    Menu.setApplicationMenu(Menu.buildFromTemplate(menus));
 };
 
 // Save userData in separate folders for each environment.
@@ -95,16 +99,18 @@ app.on('ready', function () {
     });
 
     afterMainWindow(mainWindow);
-
+    //
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'public', 'app.html'),
         protocol: 'file:',
         slashes: true
     }));
+    //mainWindow.loadURL("https://im.iopenshop.com");
+    // if (env.name === 'development') {
+    //    mainWindow.openDevTools();
+    // }
 
-    if (env.name === 'development') {
-        mainWindow.openDevTools();
-    }
+    mainWindow.show();
 });
 
 app.on('window-all-closed', function () {
