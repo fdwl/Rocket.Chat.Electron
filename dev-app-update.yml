@@ -1,4 +1,3 @@
-owner: fdwl
-repo: Rocket.Chat.Electron
-provider: github
-vPrefixedTagName: false
+provider: generic
+url: http://www.iopenshop.com/rocket.chat/
+channel: latest
